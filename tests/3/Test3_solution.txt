@@ -1,0 +1,15 @@
+Hi Jack,
+
+A segmentation fault is the result of a memory access violation. The program has referred to a memory address outside of what was allocated to it, and the OS kernel responds by killing the program with SIGSEGV.
+It is a good idea to include a backtrace of the events that led up to the seg fault.
+
+Please run below commands for backtrace:
+
+    enable core files: $ ulimit -c unlimited
+    reproduce the crash: $ ./yourapp
+    debug crash with gdb: $ gdb ./yourapp core
+
+Check the call trace from GDB until the point where it receives segmentation fault.Please let me know if any more detials you need from my side.
+
+Thanks,
+Richa
