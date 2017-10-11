@@ -1,0 +1,11 @@
+Hi Xiopeng,
+
+It seems you have not set the execute permissionn for your script run.sh To execute this program, type the following command:
+
+chmod +x run.sh
+
+Then try to run the script.
+
+./run.sh
+
+Richa

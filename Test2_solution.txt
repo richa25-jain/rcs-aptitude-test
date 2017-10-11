@@ -1,0 +1,15 @@
+Hi Sue,
+
+Here clean will return you to a state where all you have is the "source" files. In other words, it gets rid of everything that can be built from something else (objects, executables, listings and so on).
+
+So make clean ; make is expected to build everything from scratch. And, in fact, you'll often find a rule like:
+
+rebuild: clean all
+
+which will do both steps for you.
+
+You should never have to do a clean unless you're wanting to (for example) copy just the source files somewhere. If you have to do so after editing a file, then your Makefile is not set up correctly.
+
+And, if you make and get an error, you should get exactly the same error if you subsequently make without fixing said error.
+
+Richa
